@@ -17,7 +17,9 @@ def collatz(number):
     steps = steps + steps_list[int(number - 1)][1:]
     return steps
 
-for x in range(2, 10000000):
+# Tested up to 10**7
+
+for x in range(2, 10**7):
     print(x)
     steps_list.append(collatz(x))
     if len(steps_list[x - 1]) > longest:
